@@ -1,18 +1,22 @@
-import React from "react";
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import Home from "./pages/Home/Home";
-import Game from "./pages/Game/Game";
-import Details from "./pages/Details/Details";
+import { useContext } from "react";
+import Router from "./Router";
+import { GlobalStyle } from "./styles/Global.styled";
+import { ThemeProvider } from "styled-components";
+import { darkTheme,lightTheme } from "./styles/theme";
+import { ThemeContext } from "./contexts/ThemeContext";
+
 
 function App() {
+  const {theme} = useContext(ThemeContext)
+
+  const mode = (theme === "light" ? lightTheme : darkTheme)
+
   return (
-<BrowserRouter>
-  <Routes>
-    <Route path="/" element={<Home />}/>
-    <Route path="/details" element={<Details />}/>
-    <Route path="/game-on" element={<Game />}/>
-  </Routes>
-</BrowserRouter>
+    <ThemeProvider theme={mode}>
+      <GlobalStyle />
+      <Router />
+    </ThemeProvider>
+
   );
 }
 
