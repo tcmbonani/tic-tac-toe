@@ -7,7 +7,7 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   height: 10vh;
 
-  padding: 1.2rem;
+  padding: 1.7rem;
 
 .logo {
     height: 4rem;

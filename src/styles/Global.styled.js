@@ -6,7 +6,10 @@ import { createGlobalStyle } from "styled-components";
         padding: 0;
         box-sizing: border-box;
         font-family: "Poppins", sans-serif;
-
+        background-size: cover;
+        ${(props) => props.theme.media.mobile}{
+         font-size: 8px;
+        }
      }
 
      body {

@@ -8,7 +8,7 @@ flex-direction: column;
 height: 80vh;
 width: 100vw;
 background-color: ${(props) => props.theme.colors.primary};
-padding 0 2rem;
+padding: 0 3rem;
 text-align: center; 
 `;
 
