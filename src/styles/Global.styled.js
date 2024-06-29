@@ -8,7 +8,7 @@ import { createGlobalStyle } from "styled-components";
         font-family: "Poppins", sans-serif;
         background-size: cover;
         ${(props) => props.theme.media.mobile}{
-         font-size: 8px;
+        font-size: 10.55px;
         }
      }
 

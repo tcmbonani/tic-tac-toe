@@ -4,6 +4,7 @@ import { HeaderWrapper, LightModeIcon, DarkModeIcon } from './Header.styled';
 import {ReactComponent as Logo} from '../../assets/svgs/tic-tac-toe.svg';
 
 
+
 function Header() {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
