@@ -31,9 +31,9 @@ function GameCell({ cellItem, index }) {
 
   return (
     <CellStyle onClick={cellClickHandler} >
-      {game.turn === "x" ? 
+      {/* {game.turn === "x" ? 
       <XIconOutline className="outlineIcon"/> : 
-      <OIconOutline className="outlineIcon"/>}
+      <OIconOutline className="outlineIcon"/>} */}
     </CellStyle>
   );
 }
