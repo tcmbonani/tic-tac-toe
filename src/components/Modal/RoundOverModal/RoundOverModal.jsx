@@ -16,7 +16,7 @@ function RoundOverModal() {
     <ModalBody>
     <Subtitle> You win !</Subtitle>
     <Subtitle>Tshepiso X: 1</Subtitle>
-    <Subtitle>Hack-Oly O: 0</Subtitle>
+    <Subtitle>Ayanda O: 0</Subtitle>
     </ModalBody>
     <ModalFooter>
     <Button color='#f9c811' onClick={() => {
