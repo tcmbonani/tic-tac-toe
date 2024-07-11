@@ -38,21 +38,21 @@ export const GameContextProvider = (props) => {
         })
     }
     const toggleChoice = (choice) => (choice === "x" ? "o" : "x");
-
-     const switchTurn = () => {
-    setGame((prevGame) => ({
-      ...prevGame,
-      player1: {
-        ...prevGame.player1,
-        choice: toggleChoice(prevGame.player1.choice),
-      },
-      player2: {
-        ...prevGame.player2,
-        choice: toggleChoice(prevGame.player2.choice),
-      },
-      turn: prevGame.turn === "x" ? "o" : "x",
-    }));
-  };
+    
+    const switchTurn = () => {
+        setGame((prevGame) => ({
+          ...prevGame,
+          player1: {
+            ...prevGame.player1,
+            choice: toggleChoice(prevGame.player1.choice),
+          },
+          player2: {
+            ...prevGame.player2,
+            choice: toggleChoice(prevGame.player2.choice),
+          },
+          turn: prevGame.turn === "x" ? "o" : "x",
+        }));
+      };
     const updateScore = (winner) => {
             setGame(prevGame => ({
                 ...prevGame,

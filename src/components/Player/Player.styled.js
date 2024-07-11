@@ -6,5 +6,6 @@ flex-direction: column;
 justify-content: center; 
 align-items: center;
 margin: 10rem;
+background-color: ${({isPlayerActive}) => isPlayerActive ? "yellow" : "grey"};
 
 `
