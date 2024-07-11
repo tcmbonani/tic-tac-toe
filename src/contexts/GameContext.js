@@ -2,6 +2,7 @@ import { createContext,useState} from "react";
 
 export const GameContext = createContext({})
 
+
 export const GameContextProvider = (props) => {
     const [game, setGame] = useState({
         board: [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -15,7 +16,8 @@ export const GameContextProvider = (props) => {
             name: "Ayanda",
             score: 0
         },
-        turn: "x"
+        turn: "x",
+        roundWinner: ""
     })
 
 
@@ -35,29 +37,41 @@ export const GameContextProvider = (props) => {
     board: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         })
     }
+    const toggleChoice = (choice) => (choice === "x" ? "o" : "x");
 
+     const switchTurn = () => {
+    setGame((prevGame) => ({
+      ...prevGame,
+      player1: {
+        ...prevGame.player1,
+        choice: toggleChoice(prevGame.player1.choice),
+      },
+      player2: {
+        ...prevGame.player2,
+        choice: toggleChoice(prevGame.player2.choice),
+      },
+      turn: prevGame.turn === "x" ? "o" : "x",
+    }));
+  };
+    const updateScore = (winner) => {
+            setGame(prevGame => ({
+                ...prevGame,
+                [winner]: {
+                    ...prevGame[winner],
+                    score: prevGame[winner].score + 1,
+                },
+                roundWinner: prevGame[winner]
+            }))
+    }
     const roundComplete = () => {
         if(game.turn === game.player1.choice) {
-            console.log("PLAYER 1 wins")
-            setGame({
-                ...game,
-                player1: {
-                    ...game.player1,
-                    score: game.player1.score + 1
-                }
-            })
+            updateScore("player1")
         } else if(game.turn === game.player2.choice) {
-        console.log("PLAYER 2 wins")
-        setGame({
-            ...game,
-            player2: {
-                ...game.player2,
-                score: game.player2.score + 1
-            }
-        })
+        updateScore("player2")
     }else {
         console.log("DRAW")
     }
+    switchTurn();
 }
 
     return (

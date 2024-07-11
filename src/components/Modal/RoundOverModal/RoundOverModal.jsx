@@ -11,7 +11,7 @@ function RoundOverModal() {
   return (
     <>
     <ModalHeader>
-    <Title>{game.player1.choice === game.turn ? game.player1.name : game.player2.name}Round Complete</Title>
+    <Title>{game.roundWinner.name}Round Complete</Title>
     </ModalHeader>
     <ModalBody>
     <Subtitle> You win !</Subtitle>
