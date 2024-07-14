@@ -55,15 +55,35 @@ export const GameContextProvider = (props) => {
         }));
       };
     const updateScore = (winner) => {
-            setGame(prevGame => ({
+        // winner is always going to be:
+        //player1, palyer2, draw
+
+        if (winner === "draw") {
+            setGame((prevGame) => ({
                 ...prevGame,
-                [winner]: {
-                    ...prevGame[winner],
-                    score: prevGame[winner].score + 1,
+               player1: {
+                    ...prevGame.player1,
+                    score: prevGame.player1.score + 0.5,
                 },
-                roundWinner: prevGame[winner]
-            }))
-    }
+                player2: {
+                    ...prevGame.player2,
+                    score: prevGame.player2.score + 0.5,
+                },
+                roundWinner: "",
+            }));
+    } else {
+        setGame((prevGame) => ({
+            ...prevGame,
+            [winner]: {
+                ...prevGame[winner],
+                score: prevGame[winner].score + 1,
+            },
+            roundWinner: prevGame[winner],
+        }));
+        }
+    };
+    
+
     const roundComplete = (result) => {
         if(game.turn === game.player1.choice && result !== "draw") {
             updateScore("player1")
@@ -71,6 +91,7 @@ export const GameContextProvider = (props) => {
         updateScore("player2")
     }else {
         console.log("DRAW")
+        updateScore("draw")
     }
     switchTurn();
 }
