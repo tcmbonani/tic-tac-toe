@@ -24,4 +24,12 @@ color: ${(props) => props.theme.colors.tertiary};
 font-size: 1.5rem;
 font-weight: 200;
 background-color: transparent;
+padding: 10px;
+`
+
+export const Text = styled.p`
+color: ${(props) => props.theme.colors.tertiary};
+font-size: 1.2rem;
+background-color: transparent;
+padding: 10px;
 `

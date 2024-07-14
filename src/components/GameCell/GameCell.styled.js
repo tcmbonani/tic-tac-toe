@@ -26,24 +26,5 @@ padding:-4rem 3rem;
         stroke-width: 2;
     }
     }
-
-    .CellStyle {
-  /* Your existing CellStyle styles */
-  position: relative; /* Ensure relative positioning for absolute positioning */
-}
-
-.iconWrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0; /* Hide icons by default */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-}
-
-.iconWrapper.hoverIcon {
-  opacity: 1; /* Show icons when hovered */
-}
-
 }
 `

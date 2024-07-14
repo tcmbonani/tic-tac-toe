@@ -5,7 +5,14 @@ display: flex;
 flex-direction: column;
 justify-content: center; 
 align-items: center;
-margin: 10rem;
-background-color: ${({isPlayerActive}) => isPlayerActive ? "yellow" : "grey"};
+margin: 6rem;
 
+`
+
+export const AvatarWrapper = styled.div`
+div {
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+}
 `
