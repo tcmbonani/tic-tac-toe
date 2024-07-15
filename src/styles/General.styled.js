@@ -20,9 +20,13 @@ ${(props) => props.theme.media.mobile} {
 
 export const Title = styled.h1`
 color: ${(props) => props.theme.colors.tertiary};
-font-size: 3rem;
+font-size: 4rem;
 font-family: "Pacifico", cursive;
 background-color: transparent;
+
+${(props) => props.theme.media.mobile} {
+    font-size: 5rem;
+}
 `;
 
 export const Subtitle = styled.h1`

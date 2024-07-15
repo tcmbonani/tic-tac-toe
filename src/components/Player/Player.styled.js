@@ -9,6 +9,7 @@ margin: 6rem;
 
 ${(props) => props.theme.media.mobile} {
     flex-direction: row; 
+    margin: 4rem;
 }
 
 `
@@ -19,5 +20,10 @@ div {
     width: 10rem;
     height: 10rem;
     filter: ${(props) => props.isPlayerActive ? "" : 'grayscale(90%)'};
+}
+
+${(props) => props.theme.media.mobile} {
+    width: 9.2rem;
+    height: 9.2rem;
 }
 `
