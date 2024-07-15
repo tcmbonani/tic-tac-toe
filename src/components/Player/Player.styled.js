@@ -7,12 +7,17 @@ justify-content: center;
 align-items: center;
 margin: 6rem;
 
+${(props) => props.theme.media.mobile} {
+    flex-direction: row; 
+}
+
 `
 
 export const AvatarWrapper = styled.div`
 div {
     display: flex;
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
+    filter: ${(props) => props.isPlayerActive ? "" : 'grayscale(90%)'};
 }
 `

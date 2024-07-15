@@ -10,6 +10,12 @@ width: 100vw;
 background-color: ${(props) => props.theme.colors.primary};
 padding: 0 3rem;
 text-align: center; 
+
+${(props) => props.theme.media.mobile} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
 `;
 
 export const Title = styled.h1`
