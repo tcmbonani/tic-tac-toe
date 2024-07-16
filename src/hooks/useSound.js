@@ -1,23 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const useSound = (url, options) => {
-    const [sound, setSound] = useState(false);
+    const audioRef = useRef(new Audio(url));
+
     useEffect(() => {
-        const audio = new Audio(url);
-
-        audio.load();
+        const audio = audioRef.current;
         audio.volume = options.volume;
-    
-        
-        setSound(audio); 
-    }, [url, options.volume])
+        return () => {
+            audio.pause();  // Pause the audio when component unmounts
+        };
+    }, [url, options.volume]);
 
-    return () => {
-        if(sound) {
-            sound.play();
-        }
-    }
-   
-}
+    const playSound = () => {
+        const audio = audioRef.current;
+        audio.currentTime = 0;  // Rewind to the beginning
+        audio.play().catch(error => {
+            console.error('Failed to play sound:', error);
+        });
+    };
 
-export default useSound 
+    return playSound;
+};
+
+export default useSound;
+
