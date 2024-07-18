@@ -17,9 +17,13 @@ const useSound = (url, options) => {
         audio.play().catch(error => {
             console.error('Failed to play sound:', error);
         });
+        setTimeout(() => {
+            audio.currentTime = 4;
+        }, options.timeout)
     };
 
     return playSound;
+    
 };
 
 export default useSound;

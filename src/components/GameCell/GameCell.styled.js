@@ -12,9 +12,15 @@ box-shadow: 5px 10px #455141;
 cursor: pointer; 
 padding:-4rem 3rem;
 
+.markedItem {
+    path {
+        stroke: ${(props) => props.theme.colors.primary};
+    }
+}
+
 .outlineIcon{
     path {
-        stroke:  ${(props) => props.theme.colors.primary};
+        stroke:${(props) => props.theme.colors.primary};
         stroke-width: 0;
     }
 }
@@ -22,9 +28,10 @@ padding:-4rem 3rem;
     &:hover {
         .outlineIcon{
     path {
-        stroke:  ${(props) => props.theme.colors.primary};
         stroke-width: 2;
     }
     }
+
 }
+
 `

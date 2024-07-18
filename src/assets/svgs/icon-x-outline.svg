@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50" className="outlineIcon" >
   <!-- First diagonal line -->
-  <line x1="20" y1="20" x2="80" y2="80" stroke="red" className="outlineIcon" />
+  <line x1="20" y1="20" x2="80" y2="80" stroke="blue"  stroke-width="0" className="outlineIcon"/>
   <!-- Second diagonal line -->
-  <line x1="20" y1="80" x2="80" y2="20" stroke="red" className="outlineIcon" />
+  <line x1="20" y1="80" x2="80" y2="20" stroke="blue" stroke-width="0" className="outlineIcon" />
 </svg>
