@@ -9,7 +9,7 @@ const useSound = (url, options) => {
         return () => {
             audio.pause();  // Pause the audio when component unmounts
         };
-    }, [url, options.volume]);
+    }, []);//eslint-disable-line react-hooks/exhaustive-deps
 
     const playSound = () => {
         const audio = audioRef.current;
@@ -18,7 +18,6 @@ const useSound = (url, options) => {
             console.error('Failed to play sound:', error);
         });
         setTimeout(() => {
-            audio.currentTime = 3;
         }, options.timeout)
     };
 
