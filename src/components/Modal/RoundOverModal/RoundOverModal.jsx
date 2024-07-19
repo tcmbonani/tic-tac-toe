@@ -13,7 +13,7 @@ function RoundOverModal() {
   const { hoverSfx, clickSfx, completedSfx } = useContext(SfxContext)
   const { handleModal } = useContext(ModalContext);
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
     <ModalHeader>
@@ -32,11 +32,10 @@ function RoundOverModal() {
       
     }} onMouseEnter={() => hoverSfx()}>Continue</Button>
     <Button color='#8437f9' onClick={() => {
-    clickSfx();
-    //navigate("/");
+    completedSfx();
     restartGame();
     handleModal();
-    completedSfx();
+    navigate("/");
     }} 
     onMouseEnter={() => 
       hoverSfx()}>

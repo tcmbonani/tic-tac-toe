@@ -18,7 +18,7 @@ const useSound = (url, options) => {
             console.error('Failed to play sound:', error);
         });
         setTimeout(() => {
-            audio.currentTime = 1;
+            audio.currentTime = 2;
         }, options.timeout)
     };
 
