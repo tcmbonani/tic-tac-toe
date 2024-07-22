@@ -4,6 +4,8 @@ import { GlobalStyle } from "./styles/Global.styled";
 import { ThemeProvider } from "styled-components";
 import { darkTheme,lightTheme } from "./styles/theme";
 import { ThemeContext } from "./contexts/ThemeContext";
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
+
 
 function App() {
   const {theme} = useContext(ThemeContext)
@@ -14,6 +16,7 @@ function App() {
     <ThemeProvider theme={mode}>
       <GlobalStyle />
       <Router />
+      <MusicPlayer />
     </ThemeProvider>
 
 
