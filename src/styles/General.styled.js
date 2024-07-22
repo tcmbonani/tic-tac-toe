@@ -19,7 +19,7 @@ ${(props) => props.theme.media.mobile} {
 `;
 
 export const Title = styled.h1`
-color: ${(props) => props.theme.colors.tertiary};
+color: ${(props) => props.theme.colors.secondary};
 font-size: 4rem;
 font-family: "Pacifico", cursive;
 background-color: transparent;
@@ -30,7 +30,7 @@ ${(props) => props.theme.media.mobile} {
 `;
 
 export const Subtitle = styled.h1`
-color: ${(props) => props.theme.colors.tertiary};
+color: ${(props) => props.theme.colors.secondary};
 font-size: 1.5rem;
 font-weight: 200;
 background-color: transparent;
@@ -38,7 +38,7 @@ padding: 10px;
 `
 
 export const Text = styled.p`
-color: ${(props) => props.theme.colors.tertiary};
+color: ${(props) => props.theme.colors.secondary};
 font-size: 1.2rem;
 background-color: transparent;
 padding: 10px;
