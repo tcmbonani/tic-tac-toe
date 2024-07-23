@@ -13,8 +13,6 @@ export function SFxContextProvider({children}){
     }
 
 
-
-
     const hoverPath = "https://zaiocontent.s3.eu-west-2.amazonaws.com/sound-effects/tick.mp3";
     const clickPath = "https://zaiocontent.s3.eu-west-2.amazonaws.com/sound-effects/click.wav";
     const winnerPath = "https://zaiocontent.s3.eu-west-2.amazonaws.com/sound-effects/winner.wav";
